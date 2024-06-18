@@ -20,5 +20,11 @@
  */
 
 export default function makeCounter(initialValue = 0) {
-    throw 'Not implemented';
+    let currentValue = initialValue;
+    function counter(){
+        const returnCount = currentValue;
+        currentValue += 1;
+        return returnCount;
+    }
+    return counter;
 }
